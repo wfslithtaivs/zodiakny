@@ -13,12 +13,11 @@ shinyUI(pageWithSidebar(
                 
                 withTags({
                         div(class="header", checked=NA, style = "color:grey", 
-                            p("How to use this application?"),
-                            p("Input your DoB, choose the random number with slider, choose your favourite color and press Submit button. "),
-                            p("Enjoy your personal graph!"),
-                            hr(style = "color: black")
+                            p("Choose your DoB, random number and your favorite color"),
+                                p("and press Submit button --->  ")
                         )
                 }),
+                
                 
                 dateInput("date", "Input your DoB:"), 
                 
@@ -35,12 +34,12 @@ shinyUI(pageWithSidebar(
                 submitButton('Submit'),
                 
                 withTags({
-                        div(class="header", checked=NA,
-                        p(""),
-                        a(href="https://github.com/wfslithtaivs/zodiakny", "Review code here!")
+                        div(class="header", checked=NA, style = "color:grey", 
+                            p(""), 
+                            p("Enjoy your personal graph and/or --->"),
+                            a(href="https://github.com/wfslithtaivs/zodiakny", "Review code here")
                         )
-                        })
-                
+                })                
                 
         ),
         
@@ -56,7 +55,7 @@ shinyUI(pageWithSidebar(
                 verbatimTextOutput("prediction"),
                 
                 tabsetPanel(
-                        tabPanel("Graph of your day", plotOutput("newHist")), 
+                        tabPanel("Graph of your day --->", plotOutput("newHist")), 
                         
                         tabPanel("What to do with this graph?", 
                                  
