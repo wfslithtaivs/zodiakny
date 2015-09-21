@@ -2,9 +2,7 @@ library(shiny)
 library(ggplot2)
 library(igraph)
 
-# Define server logic required to find out sign, months energy plot and picture
-
-
+# Define server logic required to find out sign and graph of the day
 
 sign <- function(x){
         sign <- ""
@@ -53,9 +51,6 @@ sign <- function(x){
 }
 
 
-
-
-
 shinyServer(function(input, output) {
         
         output$odate <- renderPrint({input$date})      
@@ -63,10 +58,8 @@ shinyServer(function(input, output) {
 
         output$prediction <- renderPrint({sign(input$date)})   
 
-
                 output$newHist <- renderPlot({
-                        
-                    
+                                  
                 coeff <- switch(sign(input$date), 
                                 "Aries" = 10,
                                 "Taurus" = 12,

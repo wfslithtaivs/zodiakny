@@ -1,6 +1,9 @@
 library(shiny)
 
 # Define UI for zodiakny application
+
+# Input block
+
 shinyUI(pageWithSidebar(
         
         headerPanel("Choose the day and got the sign of your day"),
@@ -32,12 +35,16 @@ shinyUI(pageWithSidebar(
                 submitButton('Submit'),
                 
                 withTags({
+                        div(class="header", checked=NA,
                         p(""),
-                        a(href="https://github.com/wfslithtaivs/ShinyApp", "Review code here!")
+                        a(href="https://github.com/wfslithtaivs/zodiakny", "Review code here!")
+                        )
                         })
                 
                 
         ),
+        
+# Block of outputs
  
         mainPanel(
                 
