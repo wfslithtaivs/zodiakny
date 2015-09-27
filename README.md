@@ -1,5 +1,5 @@
 # zodiakny
-This is Shiny App for Coursera Developing Data Products class
+This is Shiny App for Coursera Developing Data Products class - https://wfslithtaivs.shinyapps.io/zodiakny
 
 Very simple application which contains some Input elements:
 
